@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edith Delgado | Psicologa Clinica, EMDR y Terapias Contextuales</title>
+
+  <!-- SEO y OpenGraph -->
+  <meta name="description"
+    content="Edith Delgado, psicologa clinica con mas de 18 años de experiencia. Especialista en EMDR (Trauma), conducta suicida, terapia de parejas y terapias contextuales (ACT, DBT, FAP, Mindfulness, Hipnosis)." />
+  <meta name="author" content="Edith Delgado" />
+  <meta property="og:title" content="Edith Delgado - De tus fragmentos, nace tu version mas fuerte" />
+  <meta property="og:description"
+    content="Psicologia clinica y psicoterapia basada en evidencia. Atencion a ninos, adolescentes, adultos y parejas. Kits de Soluciones Practicas." />
+  <meta property="og:image" content="./Logo.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Logo.png" />
+
+  <!-- Preconexion a Google Fonts (elimina latencia DNS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Carga critica de fuentes (LCP/FCP) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Precargar la imagen del hero para mejorar LCP -->
+  <link rel="preload" as="image" href="./assets/images/characters/251.png" />
+
+  <!-- Hoja de estilos maestra -->
+  <link rel="stylesheet" href="./assets/styles/main.css" />
+</head>
+
+<body>
+
+  <!-- Nodo de montaje de la aplicacion -->
+  <div id="app"></div>
+
+  <!-- Script de entrada ES6 modular (defer implicito en type=module para mejorar TTI) -->
+  <script type="module" src="./src/main.js"></script>
+
+</body>
+
+</html>
