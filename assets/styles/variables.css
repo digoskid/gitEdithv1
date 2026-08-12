@@ -1,0 +1,91 @@
+/* ==========================================================================
+   DESIGN SYSTEM TOKENS - MANUAL DE MARCA EDITH DELGADO
+   ========================================================================== */
+
+:root {
+  /* --- PALETA PRINCIPAL DEL MANUAL DE MARCA --- */
+  --color-primary-indigo: #6a6eb2;    /* HEX 6a6eb2 - C=67 M=58 Y=0 K=0 */
+  --color-primary-lime: #e1e155;      /* HEX e1e155 - C=18 M=0 Y=77 K=0 */
+  --color-primary-cream: #f4efdd;     /* HEX f4efdd - C=6 M=5 Y=16 K=0 */
+
+  /* --- PALETA SECUNDARIA DEL MANUAL DE MARCA --- */
+  --color-secondary-navy: #243956;    /* HEX 243956 - C=93 M=74 Y=40 K=36 */
+  --color-secondary-amber: #df991b;   /* HEX df991b - C=11 M=44 Y=95 K=2 */
+
+  /* --- TONOS FUNCIONALES --- */
+  --color-indigo-dark: #535695;
+  --color-navy-dark: #19273c;
+  --color-text-primary: #243956;
+  --color-text-secondary: #3e4e66;
+  --color-text-muted: #64748b;
+  
+  --color-surface-card: #ffffff;
+  --color-border: #243956;
+  --color-border-subtle: rgba(36, 57, 86, 0.2);
+  --color-hairline: rgba(36, 57, 86, 0.1);
+  --color-hairline-dark: rgba(36, 57, 86, 0.3);
+  --color-editorial-paper: #f9f6ea;
+  --color-editorial-subtle: #4b5d73;
+  --color-editorial-muted: #8292a5;
+
+  /* --- TIPOGRAFÍAS EDITORIALES MINIMALISTAS --- */
+  --font-heading: 'Jost', 'Futura', 'Century Gothic', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Gilmer', 'Helvetica Neue', Arial, -apple-system, sans-serif;
+  
+  /* --- MAPPING PARA COMPONENTES --- */
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+
+  /* --- ESTILO EDITORIAL / TIPOGRÁFICO MINIMALISTA (ESTRUCTURAS AFILADAS) --- */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-pill: 0px;
+
+  /* --- SOMBRAS ESTRUCTURALES PLANAS Y LIMPIAS --- */
+  --shadow-sm: 0 2px 6px rgba(36, 57, 86, 0.06);
+  --shadow-md: 0 6px 16px rgba(36, 57, 86, 0.08);
+  --shadow-lg: 0 12px 32px rgba(36, 57, 86, 0.12);
+
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s ease-in-out;
+
+  --header-height: 74px;
+  --container-max-width: 1160px;
+  --container-px: clamp(1.5rem, 3vw, 2rem);
+
+  /* --- ESCALA ESTRICTA DE RITMO DE 8PX (WHITESPACE SYSTEM) --- */
+  --space-8: 0.5rem;    /* 8px */
+  --space-16: 1rem;     /* 16px */
+  --space-24: 1.5rem;   /* 24px */
+  --space-32: 2rem;     /* 32px */
+  --space-40: 2.5rem;   /* 40px */
+  --space-48: 3rem;     /* 48px */
+  --space-64: 4rem;     /* 64px */
+  --space-80: 5rem;     /* 80px */
+  --space-88: 5.5rem;   /* 88px (11 x 8px) */
+
+  /* Aliases de compatibilidad */
+  --space-3xs: 0.25rem;
+  --space-2xs: var(--space-8);
+  --space-xs: 0.75rem;
+  --space-sm: var(--space-16);
+  --space-md: var(--space-24);
+  --space-lg: var(--space-32);
+  --space-xl: var(--space-40);
+  --space-2xl: var(--space-48);
+  --space-3xl: var(--space-64);
+  --space-4xl: var(--space-80);
+
+  /* --- TOKENS DE CONTENEDOR Y SECCIÓN --- */
+  --section-py-hero: var(--space-80);
+  --section-py-dark: var(--space-88);
+  --section-py-default: var(--space-80);
+  --section-py-desktop: var(--space-80);
+  --section-py-tablet: var(--space-48);
+  --section-py-mobile: 2.25rem;
+
+  --card-pad: 1.5rem; /* 24px */
+  --card-padding-desktop: 1.5rem; /* 24px */
+  --card-padding-mobile: 1rem;
+}

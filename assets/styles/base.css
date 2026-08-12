@@ -1,0 +1,122 @@
+/* ==========================================================================
+   BASE STYLES & BRAND MANUAL TYPOGRAPHY
+   ========================================================================== */
+
+/* --- TIPOGRAFÍA CARGADA VÍA GOOGLE FONTS (Jost & Plus Jakarta Sans) --- */
+/* Se utilizan fuentes de Google para garantizar el soporte completo de tildes y caracteres especiales,
+   solucionando el problema de sobreposición (overlap) de los acentos, y manteniendo el estilo del manual. */
+
+/* --- RESETS GLOBALES --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-primary-cream);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary-indigo);
+  color: var(--color-primary-lime);
+}
+
+/* --- TIPOGRAFÍA ESTILO EDITORIAL MINIMALISTA --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary-navy);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-primary-indigo);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-indigo-dark);
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-indigo);
+}

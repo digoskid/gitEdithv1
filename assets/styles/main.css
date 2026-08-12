@@ -1,0 +1,17 @@
+/* ==========================================================================
+   MAIN ENTRY STYLESHEET - EDITH DELGADO
+   Aggregates all design tokens, layout rules, and component styles.
+   ========================================================================== */
+
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/bio.css';
+@import './components/services.css';
+@import './components/tagline.css';
+@import './components/social.css';
+@import './components/footer.css';
+@import './components/kit-page.css';
+@import './components/quiz.css';

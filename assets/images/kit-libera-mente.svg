@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F4EFDE"/>
+  <!-- Cabeza/mente -->
+  <ellipse cx="200" cy="140" rx="70" ry="80" fill="none" stroke="#18364A" stroke-width="3"/>
+  <!-- Grietas Kintsugi saliendo de la cabeza -->
+  <path d="M200 60 Q220 30 240 10" fill="none" stroke="#E1E155" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 60 Q175 20 160 5" fill="none" stroke="#E1E155" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M270 130 Q310 110 350 120" fill="none" stroke="#E1E155" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M130 130 Q90 100 55 115" fill="none" stroke="#E1E155" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Puntos de liberacion -->
+  <circle cx="240" cy="10" r="5" fill="#E1E155"/>
+  <circle cx="160" cy="5" r="4" fill="#E1E155"/>
+  <circle cx="350" cy="120" r="4" fill="#E1E155"/>
+  <circle cx="55" cy="115" r="4" fill="#E1E155"/>
+  <!-- Detalle interior -->
+  <path d="M175 130 Q200 110 225 130" fill="none" stroke="#6A6EB2" stroke-width="2"/>
+  <circle cx="200" cy="150" r="3" fill="#6A6EB2"/>
+  <!-- Logo miniatura -->
+  <text x="200" y="270" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#18364A" font-weight="600" letter-spacing="2">LIBERA TU MENTE</text>
+</svg>

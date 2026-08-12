@@ -1,0 +1,304 @@
+/* ==========================================================================
+   KIT / COURSE PAGE STYLES - SHARED ACROSS ALL KIT LANDING PAGES
+   ========================================================================== */
+
+/* ---- Kit Header Override ---- */
+.kit-page-header {
+  position: static;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+/* ---- Kit Hero ---- */
+.kit-hero {
+  background: var(--color-primary-cream);
+  padding: 5rem 0 3rem;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.kit-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.kit-image-wrap {
+  background: #fff;
+  border: 1px solid var(--color-hairline);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-image-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---- Kit Badge ---- */
+.kit-badge {
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Kit Title ---- */
+.kit-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Kit Description ---- */
+.kit-description {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ---- Kit Price ---- */
+.kit-price-badge {
+  display: inline-block;
+  background: var(--color-primary-lime);
+  color: var(--color-secondary-navy);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Kit CTA Group ---- */
+.kit-cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.kit-cta-primary {
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+}
+
+/* ---- Kit Content Sections ---- */
+.kit-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.kit-section:last-child {
+  border-bottom: none;
+}
+
+.kit-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* ---- Kit Section Headings ---- */
+.kit-section-heading {
+  font-size: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- Kit Features List ---- */
+.kit-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kit-features-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-hairline);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+
+.kit-features-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  background: var(--color-primary-lime);
+  margin-top: 0.45rem;
+}
+
+/* ---- Kit About Author Section ---- */
+.kit-about-section {
+  background: var(--color-editorial-paper);
+}
+
+.kit-about-content {
+  max-width: 750px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.kit-about-text {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.kit-about-logo {
+  height: 60px;
+  width: auto;
+  margin-top: 2rem;
+  opacity: 0.6;
+}
+
+/* ---- Kit CTA Bar ---- */
+.kit-cta-bar {
+  background: var(--color-secondary-navy);
+  padding: 3.5rem 0;
+}
+
+.kit-cta-bar-content {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.kit-cta-bar h2 {
+  color: var(--color-primary-cream);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.kit-cta-bar p {
+  color: #a2b1c6;
+  margin-bottom: 2.5rem;
+}
+
+.kit-cta-bar-btn {
+  font-size: 1.1rem;
+  padding: 1.1rem 3rem;
+}
+
+/* ---- Kit Simple Footer ---- */
+.kit-simple-footer {
+  background: var(--color-secondary-navy);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.kit-simple-footer p {
+  color: #a2b1c6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.kit-simple-footer a {
+  color: var(--color-primary-lime);
+}
+
+.kit-simple-footer a:hover {
+  color: var(--color-primary-cream);
+}
+
+/* ==========================================================================
+   KIT PAGE — RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .kit-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .kit-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .kit-image-wrap {
+    padding: 1.5rem;
+  }
+
+  .kit-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .kit-description {
+    font-size: 1rem;
+  }
+
+  .kit-price-badge {
+    font-size: 1.6rem;
+  }
+
+  .kit-cta-group {
+    flex-direction: column;
+  }
+
+  .kit-cta-group .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .kit-section {
+    padding: 2.5rem 0;
+  }
+
+  .kit-section-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .kit-section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .kit-features-list li {
+    font-size: 0.95rem;
+    padding: 0.85rem 0;
+  }
+
+  .kit-cta-bar {
+    padding: 2.5rem 0;
+  }
+
+  .kit-cta-bar h2 {
+    font-size: 1.6rem;
+  }
+
+  .kit-cta-bar-btn {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kit-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .kit-image-wrap {
+    padding: 1rem;
+  }
+
+  .kit-section {
+    padding: 2rem 0;
+  }
+
+  .kit-about-text {
+    font-size: 1rem;
+  }
+
+  .kit-simple-footer {
+    padding: 1.5rem 0;
+  }
+}
