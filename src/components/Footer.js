@@ -41,9 +41,9 @@ export function renderFooter() {
           <div>
             <div class="footer-column-title">Kits</div>
             <ul class="footer-links-list">
-              <li><a href="./course/liberatumente/index.html">Libera tu mente</a></li>
-              <li><a href="./course/distancia-de-los-pensamientos/index.html">Distancia de los pensamientos</a></li>
-              <li><a href="./course/radar-de-rumia/index.html">Tu radar de rumia</a></li>
+              <li><a href="./course/liberatumente/">Libera tu mente</a></li>
+              <li><a href="./course/distancia-de-los-pensamientos/">Distancia de los pensamientos</a></li>
+              <li><a href="./course/radar-de-rumia/">Tu radar de rumia</a></li>
             </ul>
           </div>
 
@@ -90,9 +90,9 @@ export function renderFooter() {
             &copy; ${new Date().getFullYear()} Edith Delgado - Psicología Clínica. Todos los derechos reservados.
           </div>
           <div class="footer-legal-links">
-            <a href="https://www.edithdelgado.com/terms" target="_blank" rel="noopener">Términos y condiciones</a>
-            <a href="https://www.edithdelgado.com/cookies" target="_blank" rel="noopener">Cookies</a>
-            <a href="https://www.edithdelgado.com/privacy" target="_blank" rel="noopener">Política de privacidad</a>
+            <a href="./legal/terminos.html">Términos y condiciones</a>
+            <a href="./legal/cookies.html">Cookies</a>
+            <a href="./legal/privacidad.html">Política de privacidad</a>
           </div>
         </div>
       </div>

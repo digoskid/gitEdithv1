@@ -15,7 +15,7 @@ export const servicesData = [
     image: "./assets/images/kit-libera-mente.png",
     price: "$7.99",
     ctaText: "Inscribirse",
-    link: "./course/liberatumente/index.html"
+    link: "./course/liberatumente/"
   },
   {
     id: "distancia-pensamientos",
@@ -25,7 +25,7 @@ export const servicesData = [
     image: "./assets/images/kit-distancia.png",
     price: "$7.99",
     ctaText: "Inscribirse",
-    link: "./course/distancia-de-los-pensamientos/index.html"
+    link: "./course/distancia-de-los-pensamientos/"
   },
   {
     id: "radar-rumia",
@@ -35,6 +35,6 @@ export const servicesData = [
     image: "./assets/images/kit-radar.png",
     price: "$7.99",
     ctaText: "Inscribirse",
-    link: "./course/radar-de-rumia/index.html"
+    link: "./course/radar-de-rumia/"
   }
 ];

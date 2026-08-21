@@ -1,2 +1,0 @@
-# gitEdithv1
-githubpage

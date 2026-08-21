@@ -9,6 +9,7 @@ import { renderServicesSection, initServicesEvents } from './components/Services
 import { renderTaglineSection } from './components/TaglineSection.js';
 import { renderSocialSection } from './components/SocialSection.js';
 import { renderFooter } from './components/Footer.js';
+import { renderCookieBanner, initCookieBannerEvents } from './components/CookieBanner.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -26,10 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ${renderSocialSection()}
     </main>
     ${renderFooter()}
+    ${renderCookieBanner()}
   `;
 
   // Inicializar eventos y estado
   initHeaderEvents();
   initHeroEvents();
   initServicesEvents();
+  initCookieBannerEvents();
 });
