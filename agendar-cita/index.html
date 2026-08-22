@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Cita | Edith Delgado - Psicología Clínica</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Agenda tu cita presencial o virtual con Edith Delgado, psicóloga clínica especialista en EMDR, ACT y DBT." />
+  <link rel="icon" type="image/png" href="../Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="https://cdn.payphonetodoesposible.com/box/v1.1/payphone-payment-box.css" />
+  <link rel="stylesheet" href="../assets/styles/main.css" />
+</head>
+
+<body class="booking-page-body">
+
+  <!-- ========================================================================= -->
+  <!-- HEADER GLOBAL DEL SITIO -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="../index.html#hero" class="brand-logo" id="header-logo-link">
+        <img src="../Logo.png" alt="Edith Delgado - Logo" class="brand-logo-img" id="header-logo-img" />
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html#hero" class="nav-link">Inicio</a></li>
+          <li><a href="../index.html#conocenos" class="nav-link">Conócenos</a></li>
+          <li><a href="../index.html#servicios" class="nav-link">Kit de Soluciones</a></li>
+          <li><a href="../index.html#frase" class="nav-link">Filosofía</a></li>
+          <li><a href="../index.html#comunidad" class="nav-link">Comunidad</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="../index.html" class="btn btn-outline btn-sm">
+          Volver al Inicio
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- CONTENIDO DE AGENDAMIENTO -->
+  <!-- ========================================================================= -->
+  <main class="booking-wrapper">
+
+    <div class="booking-title-section">
+      <h1>Reserva tu Sesión</h1>
+      <p>Sigue los 4 sencillos pasos para asegurar tu espacio de atención personalizada.</p>
+    </div>
+
+    <div id="steps">
+      <div class="step active" data-step="1">
+        <div class="circle">1</div>
+        <p>Datos personales</p>
+      </div>
+      <div class="step" data-step="2">
+        <div class="circle">2</div>
+        <p>Pago seguro</p>
+      </div>
+      <div class="step" data-step="3">
+        <div class="circle">3</div>
+        <p>Fecha y hora</p>
+      </div>
+      <div class="step" data-step="4">
+        <div class="circle">4</div>
+        <p>Confirmación</p>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PASO 1: DATOS PERSONALES -->
+    <!-- ========================================================================= -->
+    <div class="paso paso-1">
+      <div class="paso-1-container">
+
+        <!-- Formulario -->
+        <div class="paso-1-col card-box">
+          <h2
+            style="color: var(--color-primary-indigo); text-align: center; margin-bottom: 20px; font-size: 22px; font-family: var(--font-heading);">
+            1. Ingresa tus datos
+          </h2>
+
+          <label for="tipo-cita">Modalidad de la cita *</label>
+          <select id="tipo-cita" class="select-moderno" required>
+            <option value="">Selecciona una modalidad</option>
+            <option value="presencial">Presencial (Quito, Ecuador)</option>
+            <option value="virtual">Virtual (Zoom / Google Meet)</option>
+          </select>
+
+          <label for="nombre-presencial">Nombre completo *</label>
+          <input type="text" id="nombre-presencial" placeholder="Ej. Ana Martínez" required autocomplete="name" />
+
+          <label for="email-presencial">Correo electrónico *</label>
+          <input type="email" id="email-presencial" placeholder="Ej. ana@email.com" required autocomplete="email" />
+
+          <label for="telefono-presencial">Número de teléfono (WhatsApp) *</label>
+          <input type="tel" id="telefono-presencial" placeholder="Ej. 0991234567" required autocomplete="tel" />
+
+          <div id="terminos-container" style="display: flex; align-items: flex-start; margin-top: 15px; padding: 4px;">
+            <input type="checkbox" id="terminos"
+              style="width: 18px; height: 18px; margin-right: 10px; margin-top: 2px; cursor: pointer;" />
+            <label for="terminos"
+              style="font-size: 13.5px; font-weight: normal; color: var(--color-text-primary); margin: 0; cursor: pointer;">
+              He leído y acepto los <a href="https://edithdelgado.learnworlds.com/terms" target="_blank" rel="noopener"
+                style="color: var(--color-primary-indigo); text-decoration: underline; font-weight: 600;">términos y
+                condiciones</a> y la política de confidencialidad.
+            </label>
+          </div>
+
+          <button id="btn-next" class="btn-principal" type="button">
+            Continuar al Pago &rarr;
+          </button>
+        </div>
+
+        <!-- Disponibilidad General (Google Calendar) -->
+        <div class="paso-1-col card-box">
+          <h3
+            style="text-align: center; color: var(--color-secondary-navy); margin-bottom: 12px; font-size: 17px; font-family: var(--font-heading);">
+            Revisa disponibilidad general
+          </h3>
+          <p style="font-size: 12.5px; color: var(--color-text-muted); text-align: center; margin-bottom: 12px;">
+            Horarios disponibles en tiempo real (Zona Horaria Ecuador: GMT-5)
+          </p>
+          <div style="border-radius: 8px; overflow: hidden; height: 420px; border: 1px solid var(--color-hairline);">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FGuayaquil&showPrint=0&mode=WEEK&showTitle=0&showTabs=0&showCalendars=0&src=cHJveWVjdG8uZWRpdGhkZWxnYWRvQGdtYWlsLmNvbQ&src=ZWRiZXRoZWRpdGhAZ21haWwuY29t&src=ZWRlbGdhZG9wOEBnbWFpbC5jb20&color=%23039be5&color=%237cb342&color=%239e69af"
+              style="border-width:0; width: 100%; height: 100%;" frameborder="0" scrolling="no">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PASO 2: PAGO SEGURO (TRANSFERENCIAS / PAYPHONE / PAYPAL) -->
+    <!-- ========================================================================= -->
+    <div class="paso paso-2" style="display: none;">
+      <div class="paso-2-container">
+
+        <!-- LADO IZQUIERDO: PRECIO + ACORDEÓN DE TRANSFERENCIAS BANCARIAS -->
+        <div class="paso-2-col card-box">
+          <!-- Precio de la sesión -->
+          <div class="price-summary-badge">
+            <span class="price-label">Valor de la consulta</span>
+            <div class="price-amount"><strong>$100.00</strong> <small>USD</small></div>
+            <span class="price-detail">Sesión personalizada individual (60 minutos)</span>
+          </div>
+
+          <div class="transfer-info-header">
+            <h3>También puedes confirmar tu consulta a través de WhatsApp utilizando estos medios de pago:</h3>
+            <p>Transferencia internacional bancaria a nombre de <strong>Edith Elizabeth Delgado Paredes</strong>, en
+              Ecuador:</p>
+          </div>
+
+          <div class="accordion-pagos" id="accordion-pagos">
+
+            <!-- Banco Pichincha -->
+            <div class="accordion-item active">
+              <button class="accordion-header" type="button">
+                <span class="accordion-icon">-</span>
+                <span class="accordion-title">Banco Pichincha</span>
+              </button>
+              <div class="accordion-body">
+                <ul class="bank-details-list">
+                  <li><span class="detail-label">Tipo de cuenta:</span> <strong>Cuenta de Ahorros</strong></li>
+                  <li>
+                    <span class="detail-label">Número de cuenta:</span>
+                    <span><strong>2203253540</strong> <button class="btn-copy" type="button"
+                        data-copy="2203253540">Copiar</button></span>
+                  </li>
+                  <li><span class="detail-label">Correo electrónico:</span> <strong>Edelgadop8@gmail.com</strong></li>
+                  <li><span class="detail-label">Código Swift:</span> <strong>PICHECEQ</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Banco Produbanco -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                <span class="accordion-icon">+</span>
+                <span class="accordion-title">Banco Produbanco</span>
+              </button>
+              <div class="accordion-body">
+                <ul class="bank-details-list">
+                  <li><span class="detail-label">Tipo de cuenta:</span> <strong>Cuenta de Ahorros</strong></li>
+                  <li>
+                    <span class="detail-label">Número de cuenta:</span>
+                    <span><strong>12798114296</strong> <button class="btn-copy" type="button"
+                        data-copy="12798114296">Copiar</button></span>
+                  </li>
+                  <li><span class="detail-label">RUC / CI:</span> <strong>0401078589</strong></li>
+                  <li><span class="detail-label">Correo electrónico:</span> <strong>Edelgadop8@gmail.com</strong></li>
+                  <li><span class="detail-label">Código Swift:</span> <strong>PRODECEQ</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Western Union -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                <span class="accordion-icon">+</span>
+                <span class="accordion-title">Western Union</span>
+              </button>
+              <div class="accordion-body">
+                <p
+                  style="font-size: 13.5px; color: var(--color-text-secondary); margin-bottom: 12px; line-height: 1.5;">
+                  Para pagos vía Western Union, solicita los datos de envío directamente a nuestro canal
+                  oficial:
+                </p>
+                <a href="https://api.whatsapp.com/send?phone=+593982728303&text=Hola%20Edith!%20Deseo%20los%20datos%20para%20realizar%20el%20pago%20por%20Western%20Union"
+                  target="_blank" rel="noopener" class="btn btn-accent btn-sm"
+                  style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                  </svg>
+                  Solicitar datos por WhatsApp
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="paypal-container" class="paso-2-col card-box">
+          <h2
+            style="text-align: center; color: var(--color-primary-indigo); font-size: 22px; font-family: var(--font-heading); margin-bottom: 20px;">
+            2. Medios de pago
+          </h2>
+
+          <div>
+            <h4
+              style="margin-bottom: 12px; color: var(--color-secondary-navy); font-size: 15px; text-align: center; font-weight: 700;">
+              Pagar con PayPhone (Tarjetas de Débito o Crédito)
+            </h4>
+            <button id="btn-open-payphone" type="button" class="btn-payphone-trigger"
+              title="Abrir pasarela segura de PayPhone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+              <span>Pagar con PayPhone</span>
+              <span class="payphone-badge">Ecuador</span>
+            </button>
+          </div>
+
+          <div class="payment-divider">
+            <hr />
+            <span>O también con</span>
+            <hr />
+          </div>
+
+          <!-- PAYPAL -->
+          <div>
+            <h4
+              style="margin-bottom: 12px; color: var(--color-secondary-navy); font-size: 15px; text-align: center; font-weight: 700;">
+              Pagar con PayPal o Tarjeta Internacional
+            </h4>
+            <div id="paypal-button-container" style="margin-top: 15px;"></div>
+          </div>
+
+          <button id="btn-volver-paso-1" type="button"
+            style="margin-top: 20px; background: none; border: none; color: var(--color-primary-indigo); font-size: 13.5px; cursor: pointer; text-decoration: underline; display: block; width: 100%; text-align: center;">
+            &larr; Volver a editar mis datos
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PASO 3: SELECCIÓN DE FECHA Y HORA -->
+    <!-- ========================================================================= -->
+    <div id="calendar-presencial" class="paso paso-3" style="display: none;">
+
+      <div class="card-box card-cita">
+        <div>
+          <h3
+            style="color: var(--color-secondary-navy); text-align: center; margin-bottom: 18px; font-weight: 700; font-family: var(--font-heading);">
+            3. Selecciona tu Fecha y Hora
+          </h3>
+
+          <div style="margin-bottom: 20px;">
+            <label for="input-fecha"
+              style="color: var(--color-primary-indigo); font-weight: 600; font-size: 14px; margin-bottom: 6px;">
+              Fecha de la Cita:
+            </label>
+            <input type="date" id="input-fecha" />
+
+            <label for="input-hora"
+              style="color: var(--color-primary-indigo); font-weight: 600; font-size: 14px; margin-top: 14px; margin-bottom: 6px;">
+              Hora de la Cita:
+            </label>
+            <select id="input-hora" class="select-moderno">
+              <option value="">Selecciona primero una fecha</option>
+            </select>
+          </div>
+
+          <ul class="info-list">
+            <li><b>Duración:</b> 1 hora</li>
+            <li><b>Días de atención:</b> Lunes a Viernes</li>
+            <li><b>Horario:</b> 9:00 AM - 8:00 PM </li>
+            <li><b>Anticipación mínima:</b> 4 horas</li>
+          </ul>
+        </div>
+
+        <button id="btn-finalizar-presencial" class="btn-principal" type="button">
+          Confirmar y Agendar Cita
+        </button>
+      </div>
+
+      <div class="card-box calendar-embed-wrap">
+        <h4
+          style="text-align: center; color: var(--color-primary-indigo); margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;">
+          Consulta la disponibilidad en vivo
+        </h4>
+        <div style="border-radius: 8px; overflow: hidden; height: 380px; border: 1px solid var(--color-hairline);">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FGuayaquil&showPrint=0&mode=WEEK&showTitle=0&showTabs=0&showCalendars=0&src=cHJveWVjdG8uZWRpdGhkZWxnYWRvQGdtYWlsLmNvbQ&src=ZWRiZXRoZWRpdGhAZ21haWwuY29t&src=ZWRlbGdhZG9wOEBnbWFpbC5jb20&color=%23039be5&color=%237cb342&color=%239e69af"
+            style="border-width:0; width:100%; height:100%;" frameborder="0" scrolling="no">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PASO 4: CONFIRMACIÓN FINAL -->
+    <!-- ========================================================================= -->
+    <div id="confirmacion-presencial" class="paso paso-4" style="display: none;">
+      <div class="card-box confirmacion-card">
+
+        <div class="success-badge-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h2 class="confirmacion-title">¡Tu cita presencial ha sido confirmada!</h2>
+        <p class="confirmacion-subtitle">
+          Te hemos enviado los detalles completos de la reserva a tu correo electrónico.<br />
+          Recuerda presentarte <strong>10 minutos antes</strong> de la hora pautada.
+        </p>
+
+        <div class="confirmacion-grid">
+          <div class="confirm-info-card">
+            <h3>Resumen de tu cita</h3>
+            <ul class="confirm-details-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Revisa tu bandeja de entrada o spam para ver el comprobante.</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Duración de la consulta: 60 minutos.</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Estado: Agendado en Google Calendar.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="confirm-info-card">
+            <h3>Ubicación del Consultorio</h3>
+            <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 10px;">Quito, Ecuador</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7972450334405!2d-78.4942662!3d-0.1862294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a61108bde65%3A0x31d1fcafd63b4953!2sEdith%20Delgado!5e0!3m2!1ses!2sec!4v1775772429240!5m2!1ses!2sec"
+              width="100%" height="170" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <a href="../index.html" class="btn-principal"
+          style="max-width: 240px; margin: 32px auto 0; text-decoration: none;">
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+
+    <div id="confirmacion-virtual" class="paso paso-4-virtual card-box confirmacion-card" style="display: none;">
+      <div class="success-badge-icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h2 class="confirmacion-title">¡Cita virtual reservada con éxito!</h2>
+      <p class="confirmacion-subtitle">
+        Hemos agendado tu sesión online. Te enviamos la confirmación con el enlace seguro de la videollamada a tu
+        <strong>correo electrónico</strong>.
+      </p>
+
+      <div class="confirm-virtual-tips">
+        <h4>Recomendaciones para tu sesión virtual:</h4>
+        <ul>
+          <li>Asegúrate de contar con buena conexión a internet.</li>
+          <li>Ubícate en un lugar privado, cómodo y libre de interrupciones.</li>
+          <li>Puedes conectarte desde tu computadora o teléfono 5 minutos antes.</li>
+        </ul>
+      </div>
+
+      <a href="../index.html" class="btn-principal"
+        style="max-width: 240px; margin: 25px auto 0; text-decoration: none;">
+        Volver al Inicio
+      </a>
+    </div>
+
+    <!-- MODAL POPUP SEGURO PAYPHONE -->
+    <div id="payphone-modal" class="payphone-modal-overlay" aria-hidden="true">
+      <div class="payphone-modal-content">
+        <div class="payphone-modal-header">
+          <div>
+            <h3 class="payphone-modal-title">Pasarela Segura PayPhone</h3>
+            <p class="payphone-modal-subtitle">Ingresa tus datos de tarjeta para confirmar tu reserva</p>
+          </div>
+          <button id="btn-close-payphone" type="button" class="payphone-modal-close"
+            aria-label="Cerrar modal">&times;</button>
+        </div>
+        <div class="payphone-modal-body">
+          <div id="pp-button"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER GLOBAL DEL SITIO -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-info">
+          <div class="footer-brand-header">
+            <a href="../index.html#hero" class="footer-logo">
+              <img src="../Logo.png" alt="Edith Delgado Logo" class="footer-logo-img" width="48" height="48" />
+            </a>
+            <div class="footer-brand-text">
+              <span class="footer-brand-name">Edith Delgado</span>
+              <span class="footer-brand-sub">Psicología Clínica</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Psicóloga clínica y psicoterapeuta con +18 años de experiencia. Especialista en EMDR (Trauma), conducta
+            suicida, terapia de parejas y soluciones contextuales breves.
+          </p>
+          <div class="footer-tagline-quote">
+            "De tus fragmentos, nace tu versión más fuerte"
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-column-title">Navegación</div>
+          <ul class="footer-links-list">
+            <li><a href="../index.html#hero">Inicio</a></li>
+            <li><a href="../index.html#conocenos">Conócenos</a></li>
+            <li><a href="../index.html#servicios">Kits de Soluciones</a></li>
+            <li><a href="../index.html#frase">Filosofía</a></li>
+            <li><a href="../index.html#comunidad">Comunidad</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-column-title">Kits Prácticos</div>
+          <ul class="footer-links-list">
+            <li><a href="../course/liberatumente/index.html">Libera tu mente</a></li>
+            <li><a href="../course/distancia-de-los-pensamientos/index.html">Distancia de los pensamientos</a></li>
+            <li><a href="../course/radar-de-rumia/index.html">Tu radar de rumia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-column-title">Contacto</div>
+          <p class="footer-contact-desc">
+            Atención presencial y virtual para niños, adolescentes, adultos y parejas.
+          </p>
+          <a href="https://api.whatsapp.com/send?phone=+593982728303&text=Hola%20Edith!%20Necesito%20tu%20ayuda%20en%20%3A"
+            target="_blank" rel="noopener" class="btn btn-accent btn-sm footer-booking-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg>
+            Escríbenos a WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2025 Edith Delgado - Psicología Clínica. Todos los derechos reservados.
+        </div>
+        <div class="footer-legal-links">
+          <a href="https://www.edithdelgado.com/terms" target="_blank" rel="noopener">Términos y condiciones</a>
+          <a href="https://www.edithdelgado.com/cookies" target="_blank" rel="noopener">Cookies</a>
+          <a href="https://www.edithdelgado.com/privacy" target="_blank" rel="noopener">Política de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=ASRPsaixrKmfiZW25kTkvdOYS4QTIFa1Ub7YE3thxYCd2QWoKn6tq6KhCkB_5jB0sz-3pxOsAtniXl2D&currency=USD"></script>
+  <script src="https://cdn.payphonetodoesposible.com/box/v1.1/payphone-payment-box.js"></script>
+
+  <script type="module" src="../src/components/BookingComponent.js"></script>
+
+</body>
+
+</html>
