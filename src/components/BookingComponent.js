@@ -4,6 +4,7 @@
    ========================================================================== */
 
 import { $, $$ } from '../utils/dom.js';
+import { initCleanNavigation } from '../utils/cleanNavigation.js';
 
 /* ==========================================================================
    1. CREDENCIALES Y CONFIGURACIÓN GLOBAL
@@ -470,6 +471,7 @@ export function initBooking() {
     tipoSeleccionado = savedTipo;
   }
 
+  initCleanNavigation();
   initPaso1Events();
   limitarFechas();
   initAccordionEvents();

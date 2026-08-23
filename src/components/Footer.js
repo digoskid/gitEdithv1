@@ -41,9 +41,9 @@ export function renderFooter() {
           <div>
             <div class="footer-column-title">Kits</div>
             <ul class="footer-links-list">
-              <li><a href="./course/liberatumente/index.html">Libera tu mente</a></li>
-              <li><a href="./course/distancia-de-los-pensamientos/index.html">Distancia de los pensamientos</a></li>
-              <li><a href="./course/radar-de-rumia/index.html">Tu radar de rumia</a></li>
+              <li><a href="./course/liberatumente/">Libera tu mente</a></li>
+              <li><a href="./course/distancia-de-los-pensamientos/">Distancia de los pensamientos</a></li>
+              <li><a href="./course/radar-de-rumia/">Tu radar de rumia</a></li>
             </ul>
           </div>
 
@@ -52,7 +52,11 @@ export function renderFooter() {
             <p class="footer-contact-desc">
               Atención presencial y virtual para niños, adolescentes, adultos y parejas.
             </p>
-            <a href="./agendar-cita/index.html" class="btn btn-accent btn-sm footer-booking-btn">
+            <p style="font-size: 0.88rem; color: #a2b1c6; margin-bottom: 14px; line-height: 1.5; display: flex; align-items: flex-start; gap: 6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary-lime); flex-shrink: 0; margin-top: 3px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span><strong style="color: var(--color-primary-cream);">Consultorio:</strong> Quito, Ecuador · <a href="https://maps.app.goo.gl/KgpJTCeMz1kmRZAa8" target="_blank" rel="noopener" style="color: var(--color-primary-lime); text-decoration: underline;">Ver en Google Maps ↗</a></span>
+            </p>
+            <a href="./agendar-cita/" class="btn btn-accent btn-sm footer-booking-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               Agendar Cita
             </a>

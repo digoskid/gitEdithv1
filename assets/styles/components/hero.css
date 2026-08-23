@@ -60,7 +60,23 @@
   align-items: center;
   gap: var(--space-16);
   flex-wrap: wrap;
-  margin-bottom: var(--space-40);
+  margin-bottom: var(--space-16);
+}
+
+.hero-trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+  font-size: 0.85rem;
+  color: var(--color-editorial-subtle);
+  font-weight: 500;
+}
+
+.hero-trust-pills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Editorial Stats Row with Hairline Dividers */

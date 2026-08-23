@@ -9,6 +9,7 @@ import { renderServicesSection, initServicesEvents } from './components/Services
 import { renderTaglineSection } from './components/TaglineSection.js';
 import { renderSocialSection } from './components/SocialSection.js';
 import { renderFooter } from './components/Footer.js';
+import { initCleanNavigation } from './utils/cleanNavigation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ${renderFooter()}
   `;
 
-  // Inicializar eventos y estado
+  // Inicializar eventos, estado y navegación limpia
+  initCleanNavigation();
   initHeaderEvents();
   initHeroEvents();
   initServicesEvents();

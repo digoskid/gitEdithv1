@@ -193,6 +193,12 @@
   box-shadow: 0 6px 15px rgba(36, 57, 86, 0.2);
 }
 
+.btn-sm {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.88rem;
+  gap: 0.5rem;
+}
+
 /* --- BADGES / ETIQUETAS RECTANGULARES --- */
 .badge {
   display: inline-flex;
