@@ -89,6 +89,37 @@ export function renderFooter() {
           </div>
         </div>
 
+        <!-- Ubicación del Consultorio - Mapa Interactivo -->
+        <div class="footer-map-section">
+          <div class="footer-map-header">
+            <div class="footer-map-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Consultorio Presencial</span>
+            </div>
+            <div class="footer-map-details">
+              <span class="footer-map-address">Sector La Floresta / González Suárez · Quito, Ecuador</span>
+              <a href="https://maps.app.goo.gl/KgpJTCeMz1kmRZAa8" target="_blank" rel="noopener" class="footer-map-btn">
+                <span>Abrir en Maps</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7972450334405!2d-78.4942662!3d-0.1862294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a61108bde65%3A0x31d1fcafd63b4953!2sEdith%20Delgado!5e0!3m2!1ses!2sec!4v1775772429240!5m2!1ses!2sec"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Consultorio Edith Delgado">
+            </iframe>
+          </div>
+        </div>
+
         <div class="footer-bottom">
           <div>
             &copy; ${new Date().getFullYear()} Edith Delgado - Psicología Clínica. Todos los derechos reservados.

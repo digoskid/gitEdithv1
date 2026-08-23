@@ -397,8 +397,10 @@ function initAccordionEvents() {
 
     header.addEventListener('click', () => {
       const isAlreadyActive = item.classList.contains('active');
+      const parentAccordion = item.closest('.accordion-pagos') || document;
+      const siblingItems = parentAccordion.querySelectorAll('.accordion-item');
 
-      items.forEach(otherItem => {
+      siblingItems.forEach(otherItem => {
         otherItem.classList.remove('active');
         const otherIcon = otherItem.querySelector('.accordion-icon');
         if (otherIcon) otherIcon.textContent = '+';

@@ -151,6 +151,113 @@
   color: var(--color-primary-cream);
 }
 
+/* ==========================================================================
+   FOOTER MAP SECTION - Premium Location Widget
+   ========================================================================== */
+.footer-map-section {
+  margin-bottom: var(--space-xl);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(244, 239, 221, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-map-section:hover {
+  border-color: rgba(106, 110, 178, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-map-header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(244, 239, 221, 0.08);
+}
+
+.footer-map-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary-cream);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.footer-map-title svg {
+  color: var(--color-primary-lime);
+  flex-shrink: 0;
+}
+
+.footer-map-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-map-address {
+  font-size: 0.82rem;
+  color: #8fa1ba;
+  white-space: nowrap;
+}
+
+.footer-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-primary-indigo);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(106, 110, 178, 0.3);
+}
+
+.footer-map-btn:hover {
+  background: var(--color-primary-lime);
+  color: var(--color-secondary-navy) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(225, 225, 85, 0.25);
+}
+
+.footer-map-frame {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #1a2a3d;
+}
+
+.footer-map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: saturate(0.85) brightness(0.92);
+  transition: filter 0.3s ease;
+}
+
+.footer-map-section:hover .footer-map-frame iframe {
+  filter: saturate(1) brightness(1);
+}
+
+/* Kit Simple Footer - Map variant */
+.kit-simple-footer .footer-map-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 992px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
