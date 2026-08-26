@@ -21,17 +21,23 @@ export function renderHeroSection() {
           </div>
 
           <p class="hero-description">
-            Ayudo a personas y parejas a superar la ansiedad, los duelos, los traumas y las crisis vitales integrando terapias basadas en la evidencia (EMDR, ACT, DBT, FAP, Mindfulness e Hipnosis) para ofrecer recursos breves, directos y profundamente efectivos.
+            Acompañamiento clínico especializado para personas y parejas que atraviesan ansiedad, duelo, traumas y crisis vitales. Integramos terapias basadas en evidencia científica (EMDR, ACT, DBT) para brindarte herramientas prácticas, profundas y transformadoras.
           </p>
 
           <div class="hero-cta-group">
-            <button class="btn btn-primary btn-wa" id="hero-booking-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              Conversemos
+            <a href="./agendar-cita/" class="btn btn-accent" id="hero-booking-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Agendar Sesión
+            </a>
+            <button class="btn btn-outline" id="hero-cta-bio">
+              Conoce mi Enfoque Clínico
             </button>
-            <button class="btn btn-outline" id="hero-cta-kits">
-              Explorar Kit de Soluciones
-            </button>
+          </div>
+
+          <div class="hero-trust-pills">
+            <span>✓ Modalidad Presencial (Quito) & Online</span>
+            <span>✓ +18 Años de Experiencia</span>
+            <span>✓ Confidencialidad Absoluta</span>
           </div>
 
           <div class="hero-stats">
@@ -73,12 +79,8 @@ export function renderHeroSection() {
 }
 
 export function initHeroEvents() {
-  document.getElementById('hero-booking-btn')?.addEventListener('click', () => {
-    window.open('https://api.whatsapp.com/send?phone=+593982728303&text=Hola%20Edith!%20Necesito%20tu%20ayuda%20en%20%3A', '_blank');
-  });
-
-  document.getElementById('hero-cta-kits')?.addEventListener('click', () => {
-    scrollToSection('servicios');
+  document.getElementById('hero-cta-bio')?.addEventListener('click', () => {
+    scrollToSection('conocenos');
   });
 
   // Animación de conteo al cargar

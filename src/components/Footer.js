@@ -52,9 +52,13 @@ export function renderFooter() {
             <p class="footer-contact-desc">
               Atención presencial y virtual para niños, adolescentes, adultos y parejas.
             </p>
-            <a href="${waLink}" target="_blank" rel="noopener" class="btn btn-accent btn-sm footer-wa-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              Conversemos
+            <p style="font-size: 0.88rem; color: #a2b1c6; margin-bottom: 14px; line-height: 1.5; display: flex; align-items: flex-start; gap: 6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary-lime); flex-shrink: 0; margin-top: 3px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span><strong style="color: var(--color-primary-cream);">Consultorio:</strong> Quito, Ecuador · <a href="https://maps.app.goo.gl/KgpJTCeMz1kmRZAa8" target="_blank" rel="noopener" style="color: var(--color-primary-lime); text-decoration: underline;">Ver en Google Maps ↗</a></span>
+            </p>
+            <a href="./agendar-cita/" class="btn btn-accent btn-sm footer-booking-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Agendar Cita
             </a>
 
             <div class="footer-social-row">
@@ -82,6 +86,37 @@ export function renderFooter() {
                 </svg>
               </a>
             </div>
+          </div>
+        </div>
+
+        <!-- Ubicación del Consultorio - Mapa Interactivo -->
+        <div class="footer-map-section">
+          <div class="footer-map-header">
+            <div class="footer-map-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Consultorio Presencial</span>
+            </div>
+            <div class="footer-map-details">
+              <span class="footer-map-address">Sector La Floresta / González Suárez · Quito, Ecuador</span>
+              <a href="https://maps.app.goo.gl/KgpJTCeMz1kmRZAa8" target="_blank" rel="noopener" class="footer-map-btn">
+                <span>Abrir en Maps</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7972450334405!2d-78.4942662!3d-0.1862294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a61108bde65%3A0x31d1fcafd63b4953!2sEdith%20Delgado!5e0!3m2!1ses!2sec!4v1775772429240!5m2!1ses!2sec"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Consultorio Edith Delgado">
+            </iframe>
           </div>
         </div>
 

@@ -31,17 +31,24 @@ export function createElement(tag, attributes = {}, children = []) {
   return el;
 }
 
-export function scrollToSection(sectionId) {
-  const target = document.getElementById(sectionId);
+export function scrollToSection(sectionId, updateHistory = true) {
+  const cleanId = (sectionId || '').replace(/^#/, '');
+  const target = document.getElementById(cleanId);
   if (target) {
-    const headerOffset = 80;
+    const header = document.querySelector('.site-header');
+    const headerHeight = header ? header.getBoundingClientRect().height : 74;
     const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = elementPosition + window.pageYOffset - (headerHeight + 16);
 
     window.scrollTo({
-      top: offsetPosition,
+      top: offsetPosition > 0 ? offsetPosition : 0,
       behavior: 'smooth'
     });
+
+    if (updateHistory && window.history && window.history.pushState) {
+      const cleanUrl = window.location.pathname + window.location.search;
+      window.history.pushState(null, '', cleanUrl);
+    }
   }
 }
 

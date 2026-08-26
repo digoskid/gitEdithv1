@@ -164,6 +164,46 @@
   gap: var(--space-3xs);
 }
 
+/* Bio Action Box */
+.bio-cta-box {
+  margin-top: var(--space-md);
+  padding: 1.15rem 1.4rem;
+  background: var(--color-editorial-paper);
+  border: 1px solid var(--color-hairline);
+  border-left: 3px solid var(--color-primary-indigo);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.bio-cta-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  color: var(--color-secondary-navy);
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
+.bio-cta-info p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .bio-cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  .bio-cta-box .btn {
+    width: 100%;
+  }
+}
+
 @media (max-width: 992px) {
   .bio-grid {
     grid-template-columns: 1fr;

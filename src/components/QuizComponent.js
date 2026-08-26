@@ -152,7 +152,7 @@ function renderStep() {
     `;
 
     $('#quiz-result-booking', container)?.addEventListener('click', () => {
-      window.openModal?.('agendar');
+      window.location.href = './agendar-cita/';
     });
 
     $('#quiz-restart-btn', container)?.addEventListener('click', () => {

@@ -1,0 +1,21 @@
+# =============================================
+#  Archivos locales / credenciales privadas
+# =============================================
+
+# Archivo de configuración real con credenciales
+src/config.js
+
+# Dependencias (si se usa npm en el futuro)
+node_modules/
+
+# Variables de entorno (por convención)
+.env
+.env.local
+.env.*.local
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
