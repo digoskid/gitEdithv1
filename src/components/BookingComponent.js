@@ -199,16 +199,24 @@ export function limitarFechas() {
   const max = new Date();
   max.setDate(hoy.getDate() + 60);
 
-  input.min = hoy.toISOString().split('T')[0];
-  input.max = max.toISOString().split('T')[0];
+  const fechaLocal = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  input.min = fechaLocal(hoy);
+  input.max = fechaLocal(max);
 
   input.addEventListener('change', function () {
     if (!this.value) return;
-    const [y, m, d] = this.value.split('-');
-    const dia = new Date(y, m - 1, d).getDay();
+    const [year, month, day] = this.value.split('-').map(Number);
+    const dia = new Date(year, month - 1, day).getDay();
     if (dia === 0 || dia === 6) {
       mostrarNotificacion("Atendemos de Lunes a Viernes. Por favor selecciona un día hábil.", "#F59E0B");
       this.value = "";
+      $('#input-hora').innerHTML = '<option value="">Selecciona una hora</option>';
       return;
     }
     validarHorasDisponibles();
@@ -221,14 +229,22 @@ export function validarHorasDisponibles() {
   if (!fechaInput || !select) return;
 
   const ahora = new Date();
-  const hoyStr = ahora.toISOString().split('T')[0];
+  const hoyStr = [
+    ahora.getFullYear(),
+    String(ahora.getMonth() + 1).padStart(2, '0'),
+    String(ahora.getDate()).padStart(2, '0')
+  ].join('-');
 
   generarHoras();
 
   if (fechaInput === hoyStr) {
-    const horaMinima = ahora.getHours() + 4;
+    const horaMinima = new Date(ahora.getTime() + 4 * 60 * 60 * 1000);
     Array.from(select.options).forEach(opt => {
-      if (opt.value && parseInt(opt.value.split(":")[0], 10) < horaMinima) {
+      if (!opt.value) return;
+      const [hour, minute] = opt.value.split(':').map(Number);
+      const candidate = new Date(ahora);
+      candidate.setHours(hour, minute, 0, 0);
+      if (candidate < horaMinima) {
         opt.disabled = true;
         opt.textContent += " (No disponible)";
       }
@@ -311,7 +327,7 @@ export function mostrarConfirmacion() {
   }
 }
 
-async function verificarRetornoPayPhone() {
+function verificarRetornoPayPhone() {
   const url = new URLSearchParams(window.location.search);
   const id = url.get("id");
   const client = url.get("clientTransactionId");
@@ -325,31 +341,39 @@ async function verificarRetornoPayPhone() {
     window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
   } catch (e) { }
 
-  try {
-    const respuesta = await fetch(GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL, {
-      method: "POST",
-      mode: "cors",
-      redirect: "follow",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-      body: JSON.stringify({
-        id: id,
-        clientTransactionId: client
-      })
-    });
-
-    const pago = await respuesta.json();
-
-    if (pago.statusCode === 3 || pago.transactionStatus === "Approved") {
-      mostrarNotificacion("¡Pago verificado y aprobado por PayPhone!", "#22C55E");
-    } else {
-      mostrarNotificacion("Pago registrado en PayPhone.", "#22C55E");
-    }
-  } catch (err) {
-    console.warn("Validación directa Apps Script:", err);
-    mostrarNotificacion("¡Pago procesado por PayPhone correctamente!", "#22C55E");
+  const frameName = "payphone-confirmation-frame";
+  let frame = document.getElementById(frameName);
+  if (!frame) {
+    frame = document.createElement("iframe");
+    frame.id = frameName;
+    frame.name = frameName;
+    frame.hidden = true;
+    document.body.appendChild(frame);
   }
+
+  const form = document.createElement("form");
+  form.method = "POST";
+  form.action = GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL;
+  form.target = frameName;
+  form.hidden = true;
+
+  const payload = {
+    id,
+    clientTxId: client
+  };
+
+  Object.entries(payload).forEach(([name, value]) => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value || "";
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+  form.remove();
+  mostrarNotificacion("Pago recibido. PayPhone está verificando la transacción.", "#3B82F6");
 
   marcarPasoCompletado(1);
   marcarPasoCompletado(2);
