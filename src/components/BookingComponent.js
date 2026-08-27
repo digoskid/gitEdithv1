@@ -5,24 +5,16 @@
 
 import { $, $$ } from '../utils/dom.js';
 import { initCleanNavigation } from '../utils/cleanNavigation.js';
+import {
+  GOOGLE_SCRIPT_AGENDAR_URL,
+  GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL,
+  PAYPHONE_STORE_ID,
+  PAYPHONE_TOKEN
+} from '../config.public.js';
 
 /* ==========================================================================
    1. CREDENCIALES Y CONFIGURACIÓN GLOBAL
    ========================================================================== */
-export let PAYPHONE_TOKEN = "TU_TOKEN_PAYPHONE_AQUI";
-export let PAYPHONE_STORE_ID = "TU_STORE_ID_PAYPHONE_AQUI";
-export let GOOGLE_SCRIPT_AGENDAR_URL = "TU_GOOGLE_SCRIPT_AGENDAR_URL_AQUI";
-export let GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL = "TU_GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL_AQUI";
-
-try {
-  const config = await import('../config.js');
-  if (config.PAYPHONE_TOKEN) PAYPHONE_TOKEN = config.PAYPHONE_TOKEN;
-  if (config.PAYPHONE_STORE_ID) PAYPHONE_STORE_ID = config.PAYPHONE_STORE_ID;
-  if (config.GOOGLE_SCRIPT_AGENDAR_URL) GOOGLE_SCRIPT_AGENDAR_URL = config.GOOGLE_SCRIPT_AGENDAR_URL;
-  if (config.GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL) GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL = config.GOOGLE_SCRIPT_PAYPHONE_CONFIRM_URL;
-} catch (e) {
-}
-
 let paypalRendered = false;
 let tipoSeleccionado = "";
 
@@ -153,7 +145,7 @@ export function renderPayPhone() {
 
   const payphoneOptions = {
     token: PAYPHONE_TOKEN,
-    clientTransactionId: "CITA-" + Date.now(),
+    clientTransactionId: ("CITA-" + Date.now()).slice(0, 50),
     amount: 10000,
     amountWithoutTax: 10000,
     amountWithTax: 0,
