@@ -34,7 +34,8 @@ jobs:
           import os
           path = Path("src/config.public.js")
           content = path.read_text()
-          path.write_text(content.replace("REEMPLAZA_CON_TOKEN_PUBLICO_PAYPHONE", os.environ["PAYPHONE_TOKEN"]))
+          token = os.environ["PAYPHONE_TOKEN"].strip()
+          path.write_text(content.replace("REEMPLAZA_CON_TOKEN_PUBLICO_PAYPHONE", token))
           PY
 
       - name: Setup Pages
