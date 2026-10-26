@@ -14,6 +14,7 @@ export const servicesData = [
     image: "./assets/images/kit-libera-mente.png",
     price: "$7.99 USD",
     link: "./course/liberatumente/",
+    paymentLink: "https://payhip.com/b/cpE1D",
     ctaText: "Ver Kit Práctico",
     category: "ansiedad"
   },
@@ -24,6 +25,7 @@ export const servicesData = [
     price: "$7.99 USD",
     image: "./assets/images/kit-distancia.png",
     link: "./course/distancia-de-los-pensamientos/",
+    paymentLink: "https://payhip.com/b/T1H6B",
     ctaText: "Ver Kit Práctico",
     category: "pensamientos"
   },
@@ -34,6 +36,7 @@ export const servicesData = [
     price: "$7.99 USD",
     image: "./assets/images/kit-radar.png",
     link: "./course/radar-de-rumia/",
+    paymentLink: "https://payhip.com/b/zEGnC",
     ctaText: "Ver Kit Práctico",
     category: "rumia"
   }
